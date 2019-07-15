@@ -1,0 +1,22 @@
+{
+  "name": "music-and-fox-delivery-bot",
+  "version": "1.0.0",
+  "description": "Music and fox image delivery bot for Discord",
+  "main": "bot.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daggintosh/music-and-fox-delivery-bot.git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Daggintosh",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/daggintosh/music-and-fox-delivery-bot/issues"
+  },
+  "homepage": "https://github.com/daggintosh/music-and-fox-delivery-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
