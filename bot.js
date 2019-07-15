@@ -17,7 +17,7 @@ robot.on('message', async message=> {
         play(recmessage)
     }
     else if (recmessage === "fox") {
-        message.reply("https://dagg.xyz/randomfox/images/" + Math.floor(Math.random() * 124) + ".jpg")
+        message.reply("https://dagg.xyz/randomfox/images/" + Math.floor(Math.random() * 125) + ".jpg")
     }
 })
 
