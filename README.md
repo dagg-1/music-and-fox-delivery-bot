@@ -1,2 +1,2 @@
 # music-and-fox-delivery-bot
-Music and fox delivery bot for Discord
+Extremely simple music bot & fox image retrieval bot for Discord
