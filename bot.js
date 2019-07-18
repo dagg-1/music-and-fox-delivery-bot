@@ -26,7 +26,7 @@ robot.on('message', async message=> {
 
 async function play(recmessage) {
     active = true;
-    const voicechannel = robot.channels.get(VOICEID); // Voice channel id
+    const voicechannel = robot.channels.get(VOICEID);
     let connection = await voicechannel.join()
 
     if(recmessage === "stop") {
