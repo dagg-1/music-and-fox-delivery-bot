@@ -4,7 +4,10 @@ const robot = new discord.Client()
 
 // npm install
 
-robot.login("EDITME") // Bot token
+let BOTTOKEN = "EDITME"
+let VOICEID = "EDITME"
+
+robot.login(BOTTOKEN)
 
 let active = false;
 
@@ -23,7 +26,7 @@ robot.on('message', async message=> {
 
 async function play(recmessage) {
     active = true;
-    const voicechannel = robot.channels.get("EDITME"); // Voice channel id
+    const voicechannel = robot.channels.get(VOICEID); // Voice channel id
     let connection = await voicechannel.join()
 
     if(recmessage === "stop") {
