@@ -16,24 +16,29 @@ robot.on('message', async message=> {
     if (active === false && recmessage.includes("https://www.youtube.com/watch?v=") || active === false && recmessage.includes("https://youtu.be/")) {
         play(recmessage)
     }
-    else if (recmessage === "stop") {
-        play(recmessage)
-    }
-    else if (recmessage === "fox") {
-        message.reply("https://dagg.xyz/randomfox/images/" + Math.floor(Math.random() * 125) + ".jpg")
+    switch (recmessage) 
+    {
+        case "fox":
+            message.reply("https://dagg.xyz/randomfox/images/" + Math.floor(Math.random() * 125) + ".jpg")
+            break;
+        case "stop":
+            play(recmessage)
+            break;
     }
 })
 
 async function play(recmessage) {
-    active = true;
     const voicechannel = robot.channels.get(VOICEID);
     let connection = await voicechannel.join()
 
-    if(recmessage === "stop") {
+    if(active === true && recmessage === "stop")
+    {
         active = false
         voicechannel.leave()
     }
-    else {
+    else
+    {
+        active = true;
         connection.playStream(ytdl(recmessage))
         .on("end",()=>{
             active = false
